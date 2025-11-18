@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand",
-    "test1": "jest",
-    "cucumber": "cucumber-js"
+    "test1": "jest --watchAll --detectOpenHandles",
+    "cucumber": "cucumber-js",
+    "cucumber1": "cucumber-js --tags=@only"
   },
   "author": "yegor belikin",
   "license": "ISC",
   "dependencies": {
+    "chai": "^6.2.1",
+    "cucumber": "^6.0.7",
     "jest-puppeteer": "^11.0.0",
     "puppeteer": "^24.29.1"
   },
