@@ -21,7 +21,7 @@ describe("Let's go to the cinema tests", () => {
       ".ticket__details.ticket__chairs",
       (element) => element.textContent
     );
-    expect(chairText).toContain("10/7");
+    expect(chairText).toContain("10/8");
   }, 60000);
 
   test("successful choice of VIPchair", async () => {
@@ -49,7 +49,7 @@ describe("Let's go to the cinema tests", () => {
     const disableButton = (await page.$("button[disabled]")) !== null;
     expect(disableButton).toBe(true);
     const takenChair = await page.$eval(
-      "div:nth-child(10) span:nth-child(7)",
+      "div:nth-child(10) span:nth-child(8)",
       (el) => el.className
     );
     const hasClass = takenChair.includes(

@@ -76,7 +76,7 @@ Then("user sees an inactive button and seat", async function () {
   const disableButton = (await this.page.$("button[disabled]")) !== null;
   expect(disableButton).to.equal(true);
   const takenChair = await this.page.$eval(
-    "div:nth-child(10) span:nth-child(7)",
+    "div:nth-child(10) span:nth-child(8)",
     (el) => el.className
   );
   const hasClass = takenChair.includes(
